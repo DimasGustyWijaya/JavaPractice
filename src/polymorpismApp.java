@@ -11,6 +11,14 @@ public class polymorpismApp {
 
     }
     static void sayHi(Employee employee){
-        System.out.println("Hi "+ employee.name);
+        if(employee instanceof VicePresident){
+            VicePresident vp = (VicePresident) employee;
+            System.out.println("hi vp " + employee.name);
+        } else if (employee instanceof Manager) {
+            Manager m = (Manager) employee;
+            System.out.println("hi manager " + employee.name);
+        } else  {
+            System.out.println("hi " + employee.name);
+        }
     }
 }
